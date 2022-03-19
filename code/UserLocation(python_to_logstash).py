@@ -10,7 +10,7 @@ PORT = 1236
 
 while(True):
     
-    url = f'https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCgd8DlmsfwuUPIE8TD8D57f3QU0SnLp0A'
+    url = f'https://www.googleapis.com/geolocation/v1/geolocate?key=<>'
 
     data = {
         'considerIp': True, # 현 IP로 데이터 추출
@@ -33,7 +33,7 @@ while(True):
         sys.stderr.write("[ERROR] %s\n" % msg[1])
         sys.exit(2)
 
-    msg = {                 # 임의로 집어넣은 위·경도 데이터. 실제론 해당 필드에 사용자의 ip주소를 위·경도 데이터로 변환하여 넣을 생각. (참고할 자료: https://www.youtube.com/watch?v=VBA4EYAGmAs)
+    msg = {                 
         "location" : {
             "lat" : lat,
             "lon" : lon
