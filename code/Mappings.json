@@ -1,0 +1,22 @@
+PUT seoul_bike
+{
+    "mappings": {
+        "properties": {
+            "대여소이름": {"type": "text"},
+            "대여소ID": {"type": "keyword"},
+            "거치대개수": {"type": "integer"},
+            "거치율": {"type": "integer"},
+            "잔여 대수": {"type": "integer"},
+            "위치": {"type": "geo_point"}
+        }
+    }
+}
+
+PUT location_data
+{
+    "mappings": {
+        "properties": {
+            "location": {"type": "geo_point"}
+        }
+    }
+}
